@@ -18,7 +18,7 @@ namespace Assets.Scripts
             isGame = true;
             player = GameObject.Find("Player");
             blockCount = 0;
-            blockTimer = Random.Range(1f, 2f);
+            blockTimer = Random.Range(3f, 5f);
             StartCoroutine(InitBlock());
 
         }
@@ -37,7 +37,7 @@ namespace Assets.Scripts
                 if (blockTimer<0)
                 {
                     CreatBlock();
-                    blockTimer = UnityEngine.Random.Range(1f,2f);
+                    blockTimer = UnityEngine.Random.Range(3f,5f);
                 }
                 
             }
@@ -49,7 +49,7 @@ namespace Assets.Scripts
         {
             
             CreatBlock();
-            yield return new WaitForSeconds(UnityEngine.Random.Range(1f,2f));
+            yield return new WaitForSeconds(UnityEngine.Random.Range(3f,5f));
         }
 
         private void CreatBlock()
